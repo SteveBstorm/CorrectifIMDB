@@ -1,0 +1,56 @@
+﻿@model LocalModel.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-6">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-6">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-6">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-6">
+            @Html.DisplayNameFor(model => model.ReleaseYear)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.ReleaseYear)
+        </dd>
+
+        <dt class="col-sm-6">
+            @Html.DisplayNameFor(model => model.Realisator)
+        </dt>
+        <dt class="col-sm-6">
+            
+            <a asp-area="" asp-controller="Person" asp-action="Details" asp-route-id=@Model.Realisator.Id>@Html.DisplayFor(model => model.Realisator.LastName) </a>
+        </dt>
+        <dt class="col-sm-6">
+            @Html.DisplayNameFor(model => model.Scenarist)
+        </dt>
+        <dd class="col-sm-6">
+            <a asp-area="" asp-controller="Person" asp-action="Details" asp-route-id=@Model.Scenarist.Id>@Html.DisplayFor(model => model.Scenarist.LastName)</a>
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
