@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using CorrectifIMDB.Models;
+using CorrectifIMDB.Tools;
+using LocalModel.Models;
 using LocalModel.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,6 +39,8 @@ namespace CorrectifIMDB.Controllers
         {
             if(ModelState.IsValid)
             {
+                _service.Create(pf.toLocal());
+
                 return RedirectToAction("Index", "Movie");
             }
 

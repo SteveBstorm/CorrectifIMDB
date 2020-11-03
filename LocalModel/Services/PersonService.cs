@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using LocalModel.Tools;
 using System.Linq;
+using DAL.Models;
 
 namespace LocalModel.Services
 {
@@ -31,6 +32,11 @@ namespace LocalModel.Services
         public IEnumerable<local.Person> GetAll()
         {
             return _repo.GetAll().Select(x => x.toLocal());
+        }
+
+        public void Create(local.Person p)
+        {
+            _repo.Insert(p.toDal());
         }
         
 

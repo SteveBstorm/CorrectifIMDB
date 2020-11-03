@@ -10,11 +10,12 @@ namespace CorrectifIMDB.Models
     {
         [ScaffoldColumn(false)]
         public int Id { get; set; }
+
         [Display(Name = "Prénom")]
         [Required]
         public string FirstName { get; set; }
+
         [Required]
-        [DataType(DataType.)]
         [StringLength(160, ErrorMessage = "Taille max: 160 et min :3", MinimumLength = 6)]
         public string LastName { get; set; }
     }

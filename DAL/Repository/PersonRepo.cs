@@ -68,9 +68,21 @@ namespace DAL.Repository
             return person;
         }
 
-        public void Insert(Person c)
+        public void Insert(Person p)
         {
-            throw new NotImplementedException();
+            using(SqlConnection c = Connection())
+            {
+                using (SqlCommand cmd = c.CreateCommand())
+                {
+                    c.Open();
+                    cmd.CommandText = "INSERT INTO Person VALUES (@lastName, @firstName)";
+
+                    cmd.Parameters.AddWithValue("firstName", p.FirstName);
+                    cmd.Parameters.AddWithValue("lastName", p.LastName);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
         public void Update(Person c)

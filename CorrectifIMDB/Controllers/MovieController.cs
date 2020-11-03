@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CorrectifIMDB.Models;
 using CorrectifIMDB.Tools;
+using LocalModel.Models;
 using LocalModel.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,7 +33,12 @@ namespace CorrectifIMDB.Controllers
             return View(new MovieForm());
         }
 
-
+        [HttpPost]
+        public IActionResult Create(MovieForm mf)
+        {
+            _service.Create(mf.toLocal());
+            return RedirectToAction("Index");
+        }
 
 
     }

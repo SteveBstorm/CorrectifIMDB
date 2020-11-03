@@ -15,5 +15,6 @@ namespace LocalModel.Models
         public int ReleaseYear { get; set; }
         public Person Realisator { get; set; }
         public Person Scenarist { get; set; }
+
     }
 }

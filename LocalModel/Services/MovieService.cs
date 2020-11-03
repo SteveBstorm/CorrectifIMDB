@@ -19,9 +19,9 @@ namespace LocalModel.Services
 
         }
 
-        public void Create(Movie m)
+        public void Create(MovieToDal m)
         {
-
+            _repo.Insert(m.toDal());
         }
 
         public local.Movie GetOne(int Id)

@@ -36,6 +36,15 @@ namespace LocalModel.Tools
             };
         }
 
+        public static dal.Person toDal(this local.Person p)
+        {
+            return new dal.Person
+            {
+                LastName = p.LastName,
+                FirstName = p.FirstName
+            };
+        }
+
         public static local.CompletePerson toCPerson(this dal.Person p)
         {
             return new local.CompletePerson
@@ -47,5 +56,18 @@ namespace LocalModel.Tools
                 ScenMovies = _movieService.GetByScenaristId(p.Id)
             };
         }
+
+        public static dal.Movie toDal(this local.MovieToDal m)
+        {
+            return new dal.Movie
+            {
+                Title = m.Title,
+                Description = m.Description,
+                ReleaseYear = m.ReleaseYear,
+                RealisatorID = m.RealisatorID,
+                ScenaristID = m.ScenaristID
+            };
+        }
+
     }
 }

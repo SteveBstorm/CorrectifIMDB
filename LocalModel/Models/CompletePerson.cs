@@ -12,5 +12,7 @@ namespace LocalModel.Models
 
         public IEnumerable<Movie> RealMovies { get; set; }
         public IEnumerable<Movie> ScenMovies { get; set; }
+
+
     }
 }
