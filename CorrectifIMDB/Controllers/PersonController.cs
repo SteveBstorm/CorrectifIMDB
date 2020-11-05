@@ -21,7 +21,7 @@ namespace CorrectifIMDB.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            return View(_service.GetAll());
         }
 
         public IActionResult Details(int Id)
@@ -45,6 +45,30 @@ namespace CorrectifIMDB.Controllers
             }
 
             return View(pf);
+        }
+
+        public IActionResult Delete(int Id)
+        {
+            if (!_service.Delete(Id))
+            {
+                TempData["error"] = "La personne doit être utilisée ailleurs et ne peut être supprimée.";
+                TempData.Keep();
+                //Error.SetMessage( "La personne doit être utilisée ailleurs et ne peut être supprimée.");
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(int Id)
+        {
+            return View(_service.GetOne(Id).toForm());
+        }
+
+        [HttpPost]
+        public IActionResult Edit(PersonForm p)
+        {
+            _service.Update(p.toLocal());
+            return RedirectToAction("Index");
         }
     }
 }

@@ -6,6 +6,7 @@ using CorrectifIMDB.Models;
 using CorrectifIMDB.Tools;
 using LocalModel.Models;
 using LocalModel.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CorrectifIMDB.Controllers
@@ -25,6 +26,7 @@ namespace CorrectifIMDB.Controllers
 
         public IActionResult Details(int Id)
         {
+            
             return View(_service.GetOne(Id));
         }
 
@@ -37,6 +39,24 @@ namespace CorrectifIMDB.Controllers
         public IActionResult Create(MovieForm mf)
         {
             _service.Create(mf.toLocal());
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Update(int Id)
+        {
+            return View(_service.GetOne(Id).toForm());
+        }
+
+        [HttpPost]
+        public IActionResult Update(MovieForm m)
+        {
+            _service.Update(m.toLocal());
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int Id)
+        {
+            _service.Delete(Id);
             return RedirectToAction("Index");
         }
 

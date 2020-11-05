@@ -1939,10 +1939,24 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "ADOLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.Data.SqlClient": "4.8.2"
+        },
+        "compile": {
+          "bin/placeholder/ADOLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ADOLibrary.dll": {}
+        }
+      },
       "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "ADOLibrary": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.9",
           "System.Data.SqlClient": "4.8.2"
         },
@@ -6557,6 +6571,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "ADOLibrary/1.0.0": {
+      "type": "project",
+      "path": "../ADOLibrary/ADOLibrary.csproj",
+      "msbuildProject": "../ADOLibrary/ADOLibrary.csproj"
     },
     "DAL/1.0.0": {
       "type": "project",

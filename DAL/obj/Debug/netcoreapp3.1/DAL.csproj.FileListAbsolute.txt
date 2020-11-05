@@ -16,3 +16,6 @@ C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\DAL\obj\Debug\netcoreapp3
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\DAL\obj\Debug\netcoreapp3.1\DAL.dll
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\DAL\bin\Debug\netcoreapp3.1\ADOLibrary.dll
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\DAL\bin\Debug\netcoreapp3.1\ADOLibrary.pdb
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete

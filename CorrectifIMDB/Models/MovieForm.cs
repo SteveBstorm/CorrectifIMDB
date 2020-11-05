@@ -11,11 +11,14 @@ namespace CorrectifIMDB.Models
     public class MovieForm
     {
         private PersonService _service;
+
+        private MovieService _movieService;
         public MovieForm()
         {
             _service = new PersonService();
+            _movieService = new MovieService();
         }
-
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public int ReleaseYear { get; set; }
@@ -44,6 +47,11 @@ namespace CorrectifIMDB.Models
         public IEnumerable<Person> Scen
         {
             get { return _service.GetAll().OrderBy(s => s.LastName); }
+        }
+
+        public IEnumerable<Actor> Actors
+        {
+            get { return _movieService.GetActors(Id); }
         }
 
         //public IEnumerable<SelectListItem> Scen

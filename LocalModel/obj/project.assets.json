@@ -152,10 +152,24 @@
           }
         }
       },
+      "ADOLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.Data.SqlClient": "4.8.2"
+        },
+        "compile": {
+          "bin/placeholder/ADOLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ADOLibrary.dll": {}
+        }
+      },
       "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "ADOLibrary": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.9",
           "System.Data.SqlClient": "4.8.2"
         },
@@ -510,6 +524,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ADOLibrary/1.0.0": {
+      "type": "project",
+      "path": "../ADOLibrary/ADOLibrary.csproj",
+      "msbuildProject": "../ADOLibrary/ADOLibrary.csproj"
     },
     "DAL/1.0.0": {
       "type": "project",

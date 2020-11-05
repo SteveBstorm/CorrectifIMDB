@@ -25,10 +25,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Index">Liste Film</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Index">Liste Films</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Person" asp-action="Index">Liste Personnes</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -42,11 +42,7 @@
                             </div>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Login">
-                        <input class="form-control mr-sm-2" type="password" placeholder="Password">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Se connecter</button>
-                    </form>
+                    <partial name="/Views/Shared/_Auth.cshtml" />
                 </div>
             </div>
         </nav>

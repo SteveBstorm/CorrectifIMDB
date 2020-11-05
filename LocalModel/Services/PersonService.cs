@@ -38,6 +38,21 @@ namespace LocalModel.Services
         {
             _repo.Insert(p.toDal());
         }
+
+        public IEnumerable<local.ActIn> GetActs(int Id)
+        {
+            return _repo.GetMovieByPersonId(Id).Select(x => x.toLocal());
+        }
+
+        public bool Delete(int Id)
+        {
+            return _repo.Delete(Id);
+        }
+
+        public void Update(local.Person p)
+        {
+            _repo.Update(p.toDal());
+        }
         
 
     }

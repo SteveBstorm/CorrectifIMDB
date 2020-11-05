@@ -50,7 +50,7 @@ namespace DAL.Repository
                 c.Open();
                 using (SqlCommand cmd = c.CreateCommand())
                 {
-                    
+
                     cmd.CommandText = "SELECT * FROM Movie";
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
@@ -92,19 +92,19 @@ namespace DAL.Repository
                             m.ReleaseYear = (int)reader["ReleaseYear"];
                             m.RealisatorID = (int)reader["RealisatorID"];
                             m.ScenaristID = (int)reader["ScenaristID"];
-                         
+
                         }
                     }
                 }
-            return m;
+                return m;
             }
         }
 
         public void Insert(Movie m)
         {
-            using(SqlConnection c = Connection())
+            using (SqlConnection c = Connection())
             {
-                using(SqlCommand cmd = c.CreateCommand())
+                using (SqlCommand cmd = c.CreateCommand())
                 {
                     c.Open();
                     cmd.CommandText = "INSERT INTO Movie VALUES (@title, @description, @ReleaseYear, @RealisatorID, @ScenaristID)";
@@ -119,12 +119,27 @@ namespace DAL.Repository
             }
         }
 
-        public void Update(Movie c)
+        public void Update(Movie m)
         {
-            throw new NotImplementedException();
+            using (SqlConnection c = Connection())
+            {
+                c.Open();
+                using (SqlCommand cmd = c.CreateCommand())
+                {
+                    cmd.CommandText = $"UPDATE Movie SET Title = @title, Description = @description, ReleaseYear = @releaseYear, RealisatorID = @real, ScenaristID = @scen WHERE Id = @id";
+                    cmd.Parameters.AddWithValue("title", m.Title);
+                    cmd.Parameters.AddWithValue("description", m.Description);
+                    cmd.Parameters.AddWithValue("releaseYear", m.ReleaseYear);
+                    cmd.Parameters.AddWithValue("real", m.RealisatorID);
+                    cmd.Parameters.AddWithValue("scen", m.ScenaristID);
+                    cmd.Parameters.AddWithValue("id", m.Id);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
 
-       
+
 
         public IEnumerable<Movie> GetByRealisatorId(int Id)
         {
@@ -180,6 +195,49 @@ namespace DAL.Repository
                             };
                         }
                     }
+                }
+            }
+        }
+
+        public IEnumerable<Actor> GetActorsByFilmId(int Id)
+        {
+            using (SqlConnection c = Connection())
+            {
+                c.Open();
+                using (SqlCommand cmd = c.CreateCommand())
+                {
+
+                    cmd.CommandText = $"SELECT a.Role, p.LastName, p.FirstName FROM Person p JOIN Actor a ON a.PersonID = p.Id WHERE a.MovieID = @id ";
+                    cmd.Parameters.AddWithValue("id", Id);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            yield return new Actor
+                            {
+                                Role = reader["Role"].ToString(),
+                                LastName = reader["LastName"].ToString(),
+                                FirstName = reader["FirstName"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+        }
+
+        public void SetAsActor(int MovieId, int PersonId, string Role)
+        {
+            using (SqlConnection c = Connection())
+            {
+                c.Open();
+                using (SqlCommand cmd = c.CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO Actor VALUES(@PersonID, @MovieID, @Role)";
+                    cmd.Parameters.AddWithValue("PersonID", PersonId);
+                    cmd.Parameters.AddWithValue("MovieID", MovieId);
+                    cmd.Parameters.AddWithValue("Role", Role);
+
+                    cmd.ExecuteNonQuery();
                 }
             }
         }

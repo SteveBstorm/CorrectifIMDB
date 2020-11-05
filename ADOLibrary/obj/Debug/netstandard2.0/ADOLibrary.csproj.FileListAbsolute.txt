@@ -1,0 +1,9 @@
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\ADOLibrary\bin\Debug\netstandard2.0\ADOLibrary.deps.json
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\ADOLibrary\bin\Debug\netstandard2.0\ADOLibrary.dll
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\ADOLibrary\obj\Debug\netstandard2.0\ADOLibrary.csprojAssemblyReference.cache
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\ADOLibrary\obj\Debug\netstandard2.0\ADOLibrary.AssemblyInfoInputs.cache
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\ADOLibrary\obj\Debug\netstandard2.0\ADOLibrary.AssemblyInfo.cs
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\ADOLibrary\bin\Debug\netstandard2.0\ADOLibrary.pdb
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\ADOLibrary\obj\Debug\netstandard2.0\ADOLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\ADOLibrary\obj\Debug\netstandard2.0\ADOLibrary.dll
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\ADOLibrary\obj\Debug\netstandard2.0\ADOLibrary.pdb

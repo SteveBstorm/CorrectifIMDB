@@ -22,7 +22,8 @@ namespace LocalModel.Tools
                 Description = m.Description,
                 ReleaseYear = m.ReleaseYear,
                 Realisator = _service.GetOne(m.RealisatorID),
-                Scenarist = _service.GetOne(m.ScenaristID)
+                Scenarist = _service.GetOne(m.ScenaristID),
+                Actors = _movieService.GetActors(m.Id)
             };
         }
 
@@ -40,6 +41,7 @@ namespace LocalModel.Tools
         {
             return new dal.Person
             {
+                Id = p.Id,
                 LastName = p.LastName,
                 FirstName = p.FirstName
             };
@@ -53,7 +55,8 @@ namespace LocalModel.Tools
                 LastName = p.LastName,
                 FirstName = p.FirstName,
                 RealMovies = _movieService.GetByRealisatorId(p.Id),
-                ScenMovies = _movieService.GetByScenaristId(p.Id)
+                ScenMovies = _movieService.GetByScenaristId(p.Id),
+                ActAs = _service.GetActs(p.Id)
             };
         }
 
@@ -61,11 +64,31 @@ namespace LocalModel.Tools
         {
             return new dal.Movie
             {
+                Id = m.Id,
                 Title = m.Title,
                 Description = m.Description,
                 ReleaseYear = m.ReleaseYear,
                 RealisatorID = m.RealisatorID,
                 ScenaristID = m.ScenaristID
+            };
+        }
+
+        public static local.Actor toLocal(this dal.Actor a)
+        {
+            return new local.Actor
+            {
+                Role = a.Role,
+                LastName = a.LastName,
+                FirstName = a.FirstName
+            };
+        }
+
+        public static local.ActIn toLocal(this dal.ActIn a)
+        {
+            return new local.ActIn
+            {
+                Role = a.Role,
+                MovieTitle = a.MovieTitle
             };
         }
 

@@ -1636,8 +1636,20 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "ADOLibrary/1.0.0": {
+        "dependencies": {
+          "System.Data.SqlClient": "4.8.2"
+        },
+        "runtime": {
+          "ADOLibrary.dll": {}
+        },
+        "compile": {
+          "ADOLibrary.dll": {}
+        }
+      },
       "DAL/1.0.0": {
         "dependencies": {
+          "ADOLibrary": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.9",
           "System.Data.SqlClient": "4.8.2"
         },
@@ -4165,6 +4177,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "ADOLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "DAL/1.0.0": {
       "type": "project",

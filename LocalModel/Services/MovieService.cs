@@ -19,6 +19,16 @@ namespace LocalModel.Services
 
         }
 
+        public void Delete(int Id)
+        {
+            _repo.Delete(Id);
+        }
+
+        public void Update(MovieToDal m)
+        {
+            _repo.Update(m.toDal());
+        }
+
         public void Create(MovieToDal m)
         {
             _repo.Insert(m.toDal());
@@ -42,6 +52,16 @@ namespace LocalModel.Services
         public IEnumerable<local.Movie> GetByScenaristId(int Id)
         {
             return _repo.GetByScenaristId(Id).Select(x => x.toLocal());
+        }
+
+        public IEnumerable<local.Actor> GetActors(int Id)
+        {
+            return _repo.GetActorsByFilmId(Id).Select(x => x.toLocal());
+        }
+
+        public void SetAsActor(int MovieId, int PersonId, string Role)
+        {
+            _repo.SetAsActor(MovieId, PersonId, Role);
         }
     }
 }

@@ -58,9 +58,10 @@
             </table>
         }
     }
-    <hr />
+    
     @{ if (Model.ScenMovies.Count() > 0)
         {
+            <hr />
             <h2>As Scenarist</h2>
             <table class="table">
                 <tbody>
@@ -85,8 +86,32 @@
                     }
                 </tbody>
             </table>
-            } }
-        </div>
+        } }
+    
+    @{
+        if (Model.ActAs.Count() > 0)
+        {
+            <hr />
+            <h2>As Actor</h2>
+            <table class="table">
+                <tbody>
+                    @foreach (var item in Model.ActAs)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Role)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MovieTitle)
+                            </td>
+                            
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
+</div>
 <div>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     <a asp-action="Index">Back to List</a>

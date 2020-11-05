@@ -11,12 +11,6 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-6">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt class="col-sm-6">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
         <dd class="col-sm-6">
@@ -39,7 +33,7 @@
             @Html.DisplayNameFor(model => model.Realisator)
         </dt>
         <dt class="col-sm-6">
-            
+
             <a asp-area="" asp-controller="Person" asp-action="Details" asp-route-id=@Model.Realisator.Id>@Html.DisplayFor(model => model.Realisator.LastName) </a>
         </dt>
         <dt class="col-sm-6">
@@ -48,7 +42,34 @@
         <dd class="col-sm-6">
             <a asp-area="" asp-controller="Person" asp-action="Details" asp-route-id=@Model.Scenarist.Id>@Html.DisplayFor(model => model.Scenarist.LastName)</a>
         </dd>
+
     </dl>
+    <hr />
+    @{
+        if (Model.Actors.Count() > 0)
+        {
+            <h2>Casting</h2>
+            <table class="table">
+                <tbody>
+                    @foreach (var item in Model.Actors)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Role)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+                            
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
 </div>
 <div>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |

@@ -43,19 +43,46 @@
 
             <div class="form-group">
                 <label>Scenarist : </label>
-            @* @Html.DropDownListFor(m => m.ScenaristID, Model.Scen, "Scenarist")*@
+                @* @Html.DropDownListFor(m => m.ScenaristID, Model.Scen, "Scenarist")*@
 
                 <select asp-for="@Model.ScenaristID">
                     @foreach (var item in Model.Scen)
-                                                            {
-                    <option value="@item.Id">@item.LastName</option>
-                }
+                    {
+                        <option value="@item.Id">@item.LastName</option>
+                    }
                 </select>
                 <input type="button" class="btn btn-warning" value="Ajouter" onclick="@("window.location.href='"+ @Url.Action("Create", "Person")+"'");" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+            <div class="form-group">
+                @{
+                    if (Model.Actors.Count() > 0)
+                    {
+                        <h2>As Realisator</h2>
+                        <table class="table">
+                            <tbody>
+                                @foreach (var item in Model.Actors)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Role)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.LastName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FirstName)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                }
+            </div>
+            <input type="button" class="btn btn-warning" value="Ajouter un acteur" onclick="@("window.location.href='"+ @Url.Action("SetActor", "Movie", new { Id = Model.Id })+"'");" />
         </form>
     </div>
 </div>

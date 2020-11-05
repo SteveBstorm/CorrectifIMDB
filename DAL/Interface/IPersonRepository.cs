@@ -10,6 +10,6 @@ namespace DAL.Interface
         Person GetOne(int Id);
         void Insert(Person c);
         void Update(Person c);
-        void Delete(int Id);
+        bool Delete(int Id);
     }
 }

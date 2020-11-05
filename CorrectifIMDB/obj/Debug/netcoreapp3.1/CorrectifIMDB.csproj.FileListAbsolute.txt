@@ -246,3 +246,9 @@ C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\n
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\Person\Details.cshtml.g.cs
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Create.cshtml.g.cs
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\Person\Create.cshtml.g.cs
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\Person\Index.cshtml.g.cs
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Update.cshtml.g.cs
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\Person\Edit.cshtml.g.cs
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Auth.cshtml.g.cs
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\bin\Debug\netcoreapp3.1\ADOLibrary.dll
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\bin\Debug\netcoreapp3.1\ADOLibrary.pdb

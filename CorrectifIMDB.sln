@@ -9,7 +9,9 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MovieDB", "MovieDB\MovieDB.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{B82A0EB1-F2D9-4D3D-B389-526111118D57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalModel", "LocalModel\LocalModel.csproj", "{BF7908A6-73B3-486F-B4D0-B266A199F70D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalModel", "LocalModel\LocalModel.csproj", "{BF7908A6-73B3-486F-B4D0-B266A199F70D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOLibrary", "ADOLibrary\ADOLibrary.csproj", "{14386468-B03B-4E1E-8567-195DCDAF678A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{BF7908A6-73B3-486F-B4D0-B266A199F70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF7908A6-73B3-486F-B4D0-B266A199F70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF7908A6-73B3-486F-B4D0-B266A199F70D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14386468-B03B-4E1E-8567-195DCDAF678A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14386468-B03B-4E1E-8567-195DCDAF678A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14386468-B03B-4E1E-8567-195DCDAF678A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14386468-B03B-4E1E-8567-195DCDAF678A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
