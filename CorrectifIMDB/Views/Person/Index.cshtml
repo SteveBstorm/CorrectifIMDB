@@ -6,9 +6,12 @@
 
 <h1>Index</h1>
 
+@if( CorrectifIMDB.Tools.SessionHelper.User != null) {
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+}
+
 
 @if(CorrectifIMDB.Tools.Error.Message != null)
 {
@@ -46,9 +49,14 @@
                 @Html.DisplayFor(modelItem => item.FirstName)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.Id }) |
-                @Html.ActionLink("Details", "Details", new {  id=item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.Id  })
+                @if( CorrectifIMDB.Tools.SessionHelper.User != null && CorrectifIMDB.Tools.SessionHelper.User.IsAdmin) {
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new {  id=item.Id }) |
+                    @Html.ActionLink("Details", "Details", new {  id=item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new {  id=item.Id  })
+                </p>
+                }else if(CorrectifIMDB.Tools.SessionHelper.User != null) { <p> @Html.ActionLink("Details", "Details", new {  id=item.Id })</p> }
+                
             </td>
         </tr>
 }

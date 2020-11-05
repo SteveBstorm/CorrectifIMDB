@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ADOLibrary\ADOLibrary.csproj" />
+    <ProjectReference Include="..\ADOToolbox\ADOToolbox.csproj" />
   </ItemGroup>
 
 </Project>

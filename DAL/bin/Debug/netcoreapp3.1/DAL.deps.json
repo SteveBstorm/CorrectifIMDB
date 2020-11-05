@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "DAL/1.0.0": {
         "dependencies": {
-          "ADOLibrary": "1.0.0",
+          "ADOToolbox": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.9",
           "System.Data.SqlClient": "4.8.2"
         },
@@ -110,12 +110,12 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "ADOLibrary/1.0.0": {
+      "ADOToolbox/1.0.0": {
         "dependencies": {
           "System.Data.SqlClient": "4.8.2"
         },
         "runtime": {
-          "ADOLibrary.dll": {}
+          "ADOToolbox.dll": {}
         }
       }
     }
@@ -203,7 +203,7 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "ADOLibrary/1.0.0": {
+    "ADOToolbox/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

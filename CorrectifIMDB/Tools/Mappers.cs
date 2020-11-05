@@ -55,5 +55,39 @@ namespace CorrectifIMDB.Tools
                 FirstName = p.FirstName
             };
         }
+
+        public static local.User toLocal(this asp.LoginViewModel l)
+        {
+            return new local.User
+            {
+                Email = l.Email,
+                Password = l.Password
+            };
+        }
+
+        public static local.User toLocal(this asp.RegisterFormModel model)
+        {
+            return new local.User
+            {
+                Email = model.Email,
+                Password = model.Password,
+                LastName = model.LastName,
+                FirstName = model.FirstName,
+                BirthDate = model.BirthDate,
+            };
+        }
+
+        public static asp.RegisterFormModel toForm(this local.User model)
+        {
+            return new asp.RegisterFormModel
+            {
+                Id = model.Id,
+                Email = model.Email,
+                Password = model.Password,
+                LastName = model.LastName,
+                FirstName = model.FirstName,
+                BirthDate = model.BirthDate,
+            };
+        }
     }
 }

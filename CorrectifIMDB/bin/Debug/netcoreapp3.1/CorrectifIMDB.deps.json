@@ -26,6 +26,7 @@
         "dependencies": {
           "LocalModel": "1.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
+          "System.Data.SqlClient": "4.8.2",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -1636,20 +1637,20 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "ADOLibrary/1.0.0": {
+      "ADOToolbox/1.0.0": {
         "dependencies": {
           "System.Data.SqlClient": "4.8.2"
         },
         "runtime": {
-          "ADOLibrary.dll": {}
+          "ADOToolbox.dll": {}
         },
         "compile": {
-          "ADOLibrary.dll": {}
+          "ADOToolbox.dll": {}
         }
       },
       "DAL/1.0.0": {
         "dependencies": {
-          "ADOLibrary": "1.0.0",
+          "ADOToolbox": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.9",
           "System.Data.SqlClient": "4.8.2"
         },
@@ -4178,7 +4179,7 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "ADOLibrary/1.0.0": {
+    "ADOToolbox/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

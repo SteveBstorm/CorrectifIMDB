@@ -23,37 +23,37 @@ namespace CorrectifIMDB.Controllers
         {
             return View(_service.GetAll());
         }
-
+        [AuthRequired]
         public IActionResult Details(int Id)
         {
             
             return View(_service.GetOne(Id));
         }
-
+        [AdminRequired]
         public IActionResult Create()
         {
             return View(new MovieForm());
         }
-
+        [AdminRequired]
         [HttpPost]
         public IActionResult Create(MovieForm mf)
         {
             _service.Create(mf.toLocal());
             return RedirectToAction("Index");
         }
-
+        [AdminRequired]
         public IActionResult Update(int Id)
         {
             return View(_service.GetOne(Id).toForm());
         }
-
+        [AdminRequired]
         [HttpPost]
         public IActionResult Update(MovieForm m)
         {
             _service.Update(m.toLocal());
             return RedirectToAction("Index");
         }
-
+        [AdminRequired]
         public IActionResult Delete(int Id)
         {
             _service.Delete(Id);

@@ -152,24 +152,24 @@
           }
         }
       },
-      "ADOLibrary/1.0.0": {
+      "ADOToolbox/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "System.Data.SqlClient": "4.8.2"
         },
         "compile": {
-          "bin/placeholder/ADOLibrary.dll": {}
+          "bin/placeholder/ADOToolbox.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ADOLibrary.dll": {}
+          "bin/placeholder/ADOToolbox.dll": {}
         }
       },
       "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "ADOLibrary": "1.0.0",
+          "ADOToolbox": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.9",
           "System.Data.SqlClient": "4.8.2"
         },
@@ -525,10 +525,10 @@
         "version.txt"
       ]
     },
-    "ADOLibrary/1.0.0": {
+    "ADOToolbox/1.0.0": {
       "type": "project",
-      "path": "../ADOLibrary/ADOLibrary.csproj",
-      "msbuildProject": "../ADOLibrary/ADOLibrary.csproj"
+      "path": "../ADOToolbox/ADOToolbox.csproj",
+      "msbuildProject": "../ADOToolbox/ADOToolbox.csproj"
     },
     "DAL/1.0.0": {
       "type": "project",

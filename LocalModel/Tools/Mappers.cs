@@ -92,5 +92,35 @@ namespace LocalModel.Tools
             };
         }
 
+        public static local.User toLocal(this dal.User u)
+        {
+            return new local.User
+            {
+                Id = u.Id,
+                Email = u.Email,
+                Password = u.Password,
+                LastName = u.LastName,
+                FirstName = u.FirstName,
+                BirthDate = u.BirthDate,
+                IsActive = u.IsActive,
+                IsAdmin = u.IsAdmin
+            };
+        }
+
+        public static dal.User toDal(this local.User u)
+        {
+            return new dal.User
+            {
+                Id = u.Id,
+                Email = u.Email,
+                Password = u.Password,
+                LastName = u.LastName,
+                FirstName = u.FirstName,
+                BirthDate = u.BirthDate,
+                IsActive = u.IsActive,
+                IsAdmin = u.IsAdmin
+            };
+        }
+
     }
 }

@@ -4,14 +4,14 @@
     "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOLibrary\\ADOLibrary.csproj": {
+    "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOToolbox\\ADOToolbox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOLibrary\\ADOLibrary.csproj",
-        "projectName": "ADOLibrary",
-        "projectPath": "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOLibrary\\ADOLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOToolbox\\ADOToolbox.csproj",
+        "projectName": "ADOToolbox",
+        "projectPath": "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOToolbox\\ADOToolbox.csproj",
         "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOLibrary\\obj\\",
+        "outputPath": "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOToolbox\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -23,14 +23,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -41,14 +41,8 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netcoreapp3.1": {
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.2, )"
@@ -64,6 +58,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
@@ -96,8 +95,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOLibrary\\ADOLibrary.csproj": {
-                "projectPath": "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOLibrary\\ADOLibrary.csproj"
+              "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOToolbox\\ADOToolbox.csproj": {
+                "projectPath": "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOToolbox\\ADOToolbox.csproj"
               }
             }
           }

@@ -23,7 +23,7 @@ namespace CorrectifIMDB.Controllers
         {
             return View(_service.GetAll());
         }
-
+        [AuthRequired]
         public IActionResult Details(int Id)
         {
             return View(_service.GetComplete(Id));
@@ -33,7 +33,7 @@ namespace CorrectifIMDB.Controllers
         {
             return View();
         }
-
+        [AdminRequired]
         [HttpPost]
         public IActionResult Create(PersonForm pf)
         {
@@ -46,7 +46,7 @@ namespace CorrectifIMDB.Controllers
 
             return View(pf);
         }
-
+        [AdminRequired]
         public IActionResult Delete(int Id)
         {
             if (!_service.Delete(Id))
@@ -58,12 +58,12 @@ namespace CorrectifIMDB.Controllers
 
             return RedirectToAction("Index");
         }
-
+        [AdminRequired]
         public IActionResult Edit(int Id)
         {
             return View(_service.GetOne(Id).toForm());
         }
-
+        [AdminRequired]
         [HttpPost]
         public IActionResult Edit(PersonForm p)
         {

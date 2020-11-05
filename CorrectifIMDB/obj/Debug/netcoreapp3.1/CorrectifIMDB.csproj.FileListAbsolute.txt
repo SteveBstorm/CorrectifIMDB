@@ -216,8 +216,6 @@ C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\bin\Debug\n
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\bin\Debug\netcoreapp3.1\LocalModel.pdb
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\bin\Debug\netcoreapp3.1\DAL.pdb
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\CorrectifIMDB.csprojAssemblyReference.cache
-C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\CorrectifIMDB.csproj.CoreCompileInputs.cache
-C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\CorrectifIMDB.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\CorrectifIMDB.RazorAssemblyInfo.cache
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\CorrectifIMDB.RazorAssemblyInfo.cs
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\CorrectifIMDB.AssemblyInfoInputs.cache
@@ -250,5 +248,9 @@ C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\n
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Update.cshtml.g.cs
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\Person\Edit.cshtml.g.cs
 C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Auth.cshtml.g.cs
-C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\bin\Debug\netcoreapp3.1\ADOLibrary.dll
-C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\bin\Debug\netcoreapp3.1\ADOLibrary.pdb
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\CorrectifIMDB.csproj.CoreCompileInputs.cache
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\CorrectifIMDB.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\bin\Debug\netcoreapp3.1\ADOToolbox.dll
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\bin\Debug\netcoreapp3.1\ADOToolbox.pdb
+C:\Users\Steve\source\Correctifs\CorrectifIMDB\AspIMDB\CorrectifIMDB\obj\Debug\netcoreapp3.1\Razor\Views\User\Register.cshtml.g.cs

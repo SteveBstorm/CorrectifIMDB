@@ -1,8 +1,18 @@
-﻿<form class="form-inline my-2 my-lg-0" asp-action="Login" asp-controller="Test">
-    <input class="form-control mr-sm-2" type="text" placeholder="Login">
-    <input class="form-control mr-sm-2" type="password" placeholder="Password">
+﻿@model CorrectifIMDB.Models.LoginViewModel
+@if (CorrectifIMDB.Tools.SessionHelper.User != null)
+{
+    <form asp-action="logout" asp-controller="Auth">
+        <button class="btn btn-secondary my-2 my-sm-0">Se Déconnecter</button>
+    </form>
+}
+else
+{
+<form class="form-inline my-2 my-lg-0" asp-action="Login" asp-controller="Auth">
+    <input asp-for="Email" class="form-control mr-sm-2" type="text" placeholder="Email">
+    <input asp-for="Password" class="form-control mr-sm-2" type="password" placeholder="Password">
     <button class="btn btn-secondary my-2 my-sm-0" type="submit">Se connecter</button>
 </form>
+}
 @*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@

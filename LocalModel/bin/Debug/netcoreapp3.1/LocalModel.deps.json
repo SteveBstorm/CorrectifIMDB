@@ -108,22 +108,30 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "ADOLibrary/1.0.0": {
+      "ADOToolbox/1.0.0": {
         "dependencies": {
           "System.Data.SqlClient": "4.8.2"
         },
         "runtime": {
-          "ADOLibrary.dll": {}
+          "ADOToolbox.dll": {}
         }
       },
       "DAL/1.0.0": {
         "dependencies": {
-          "ADOLibrary": "1.0.0",
+          "ADOToolbox": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.9",
           "System.Data.SqlClient": "4.8.2"
         },
         "runtime": {
           "DAL.dll": {}
+        }
+      },
+      "ADOLibrary/1.0.0.0": {
+        "runtime": {
+          "ADOLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -211,13 +219,18 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "ADOLibrary/1.0.0": {
+    "ADOToolbox/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "DAL/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ADOLibrary/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

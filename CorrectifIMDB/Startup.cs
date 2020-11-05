@@ -24,6 +24,8 @@ namespace CorrectifIMDB
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDistributedMemoryCache();
+            services.AddSession();
 
         }
 
@@ -42,6 +44,7 @@ namespace CorrectifIMDB
 
             app.UseRouting();
 
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

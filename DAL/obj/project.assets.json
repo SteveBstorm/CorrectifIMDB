@@ -152,17 +152,17 @@
           }
         }
       },
-      "ADOLibrary/1.0.0": {
+      "ADOToolbox/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "System.Data.SqlClient": "4.8.2"
         },
         "compile": {
-          "bin/placeholder/ADOLibrary.dll": {}
+          "bin/placeholder/ADOToolbox.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ADOLibrary.dll": {}
+          "bin/placeholder/ADOToolbox.dll": {}
         }
       }
     }
@@ -513,15 +513,15 @@
         "version.txt"
       ]
     },
-    "ADOLibrary/1.0.0": {
+    "ADOToolbox/1.0.0": {
       "type": "project",
-      "path": "../ADOLibrary/ADOLibrary.csproj",
-      "msbuildProject": "../ADOLibrary/ADOLibrary.csproj"
+      "path": "../ADOToolbox/ADOToolbox.csproj",
+      "msbuildProject": "../ADOToolbox/ADOToolbox.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "ADOLibrary >= 1.0.0",
+      "ADOToolbox >= 1.0.0",
       "Microsoft.Extensions.Configuration.Abstractions >= 3.1.9",
       "System.Data.SqlClient >= 4.8.2"
     ]
@@ -559,8 +559,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOLibrary\\ADOLibrary.csproj": {
-              "projectPath": "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOLibrary\\ADOLibrary.csproj"
+            "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOToolbox\\ADOToolbox.csproj": {
+              "projectPath": "C:\\Users\\Steve\\source\\Correctifs\\CorrectifIMDB\\AspIMDB\\ADOToolbox\\ADOToolbox.csproj"
             }
           }
         }

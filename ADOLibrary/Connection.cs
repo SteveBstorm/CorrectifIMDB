@@ -66,14 +66,45 @@ namespace ADOLibrary
             }
         }
 
-        public IEnumerable<T> ExecuteReader<T>(Command command, Func<SqlDataReader, T> convert)
+        public IEnumerable<T> ExecuteReader<T>(Command Command)
+            where T : new()
         {
             using (SqlConnection c = CreateConnection())
             {
-                using(SqlCommand cmd = CreateCommand(command, c))
+                using (SqlCommand cmd = CreateCommand(Command, c))
                 {
                     c.Open();
-                    using(SqlDataReader dr = cmd.ExecuteReader())
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        System.Reflection.PropertyInfo[] props = typeof(T).GetProperties();
+
+                        while (dr.Read())
+                        {
+                            T elem = (T)Activator.CreateInstance(typeof(T));
+
+                            foreach (System.Reflection.PropertyInfo property in props)
+                            {
+                                property.SetValue(elem, dr[property.Name]);
+                            }
+
+                            yield return elem;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        public IEnumerable<T> ExecuteReader<T>(Command Command, Func<SqlDataReader, T> convert)
+        {
+            using (SqlConnection c = CreateConnection())
+            {
+                using (SqlCommand cmd = CreateCommand(Command, c))
+                {
+                    c.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         while (dr.Read())
                         {
@@ -82,6 +113,8 @@ namespace ADOLibrary
                     }
                 }
             }
+
         }
+
     }
 }

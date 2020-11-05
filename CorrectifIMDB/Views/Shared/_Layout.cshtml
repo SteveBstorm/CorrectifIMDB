@@ -42,7 +42,7 @@
                             </div>
                         </li>
                     </ul>
-                    <partial name="/Views/Shared/_Auth.cshtml" />
+                    @Html.Partial("/Views/Shared/_Auth.cshtml", new LoginViewModel())
                 </div>
             </div>
         </nav>
