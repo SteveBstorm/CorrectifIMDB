@@ -15,5 +15,7 @@ namespace LocalModel.Models
         
         public IEnumerable<ActIn> ActAs { get; set; }
 
+
     }
+
 }

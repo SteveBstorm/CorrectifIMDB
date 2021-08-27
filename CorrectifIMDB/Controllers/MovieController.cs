@@ -60,6 +60,11 @@ namespace CorrectifIMDB.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Test()
+        {
+            return View();
+        }
+
 
     }
 }
